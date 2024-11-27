@@ -1,0 +1,35 @@
+h1 {
+    color: blue;
+}
+
+.container {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 85%;
+}
+
+.search {
+    width: 15%;
+}
+
+.cards img {
+    width: 50%;
+}
+
+.cont-detail img {
+    width: 500px;
+}
+
+.order-detail img {
+    width: 300px;
+}
+
+.card {
+    width: 20%;
+    border: solid black thin;
+    margin: 10px;
+    padding: 5px;
+}

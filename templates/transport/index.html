@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container">
+
+  <div class="search">
+    <h1>Поиск</h1>
+    <form actio="{% url 'transport:index' %}">
+      <input name="search" value="{{ search_value }}" />
+      <button type="submit">Поиск</button>
+    </form>
+  </div>
+  
+  <div class="container cards">
+    {% for container in containers %}
+      <div class="card">
+        <img src="{% static container.image %}" alt="{{ container.name }}" />
+        <h2>{{ container.name }}</h2>
+        <p>{{ container.description }}</p>
+        <p>Стоимость: {{ container.price }}</p>
+        <button> 
+          <a href="{% url 'transport:cont' container.id %}">Перейти</a>
+        </button>
+      </div>
+    {% endfor %}
+  </div>
+
+
+
+</div>
+
+{% endblock %}
